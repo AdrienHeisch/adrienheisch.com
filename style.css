@@ -1,0 +1,164 @@
+@font-face {
+    font-family: Quicksand;
+    src: url("./media/Quicksand_Book.otf") format("opentype");
+}
+
+.hidden {
+    display: none;
+}
+
+.fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+html {
+    color: white;
+    font-family: Quicksand;
+}
+
+html, body {
+    overflow: hidden;
+}
+
+button, input, textarea, select {
+    font-family: Quicksand;
+    border-radius: 5px;
+}
+
+#nav-button {
+    position: absolute;
+    top: 50px;
+    right: 25px;
+    transition: transform 0.2s ease-out;
+}
+
+#nav-button:hover {
+    transform: scale(1.05);
+}
+
+#nav-button:active {
+    transform: scale(1.1);
+}
+
+#nav {
+    position: absolute;
+    box-sizing: border-box;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    padding-top: 150px;
+    overflow: hidden;
+    background: grey;
+    transition: width 0.5s ease-in-out;
+    text-align: right;
+    user-select: none;
+}
+
+#nav > p {
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+#nav > p > span {
+    transition: padding 0.1s ease-in-out;
+}
+
+#nav > p > span:hover {
+    padding-right: 1em;
+}
+
+#background {
+    object-fit: cover;
+    filter: brightness(0.15);
+}
+
+#homepage > * {
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#title {
+    bottom: 70%;
+    font-size: 1.5em;
+}
+
+#centerdiv {
+    bottom: 40%;
+    line-height: 0;
+}
+
+#player {
+    transform: scale(0.8, 0.8);
+}
+
+#newsletter {
+    bottom: 15%;
+}
+
+#footer {
+    bottom: 0;
+    font-size: 0.8em;
+}
+
+#lyrics {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(30em, 85%);
+    max-height: calc(100% - 20%);
+    text-align: center;
+    overflow-y: scroll;
+}
+::-webkit-scrollbar {
+    width: 0;
+}
+
+#lyrics > div {
+    font-size: 0.9em;
+}
+
+#contact {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    line-height: 1.5em;
+    text-align: center;
+}
+
+#contact > form {
+    text-align: left;
+}
+
+#contact > form > div > input, textarea {
+    width: min(400px, 60vw);
+    min-height: 2em;
+}
+
+#about-container {
+    position: absolute;
+    bottom: 45%;
+    left: 17.5%;
+    transform: translate(-50%, 50%);
+    width: 25em;
+    text-align: center;
+}
+
+#about {
+    text-align: justify;
+    text-align-last: center;
+    font-size: 0.9em;
+}
+
+#about > p {
+    margin-top: 0.5em;
+    margin-bottom: 0em;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Adrien Heisch</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <div id="background-container" class="fill">
+        <img 
+            id="background"
+            src="./media/background.jpg"
+            alt=""
+            class="fill"
+        />
+        </div>
+        <div id="content">
+            <div id="homepage">
+                <div id="title">
+                    <h1>ADRIEN HEISCH</h1>
+                </div>
+                <div id="centerdiv">
+                    <p>1er titre - LIAR</p>
+                    <audio
+                        id="player"
+                        controls
+                        src="./media/Liar.mp3"
+                        autofocus >
+                            Your browser does not support the
+                            <code>audio</code> element.
+                    </audio>
+                    <p>1er EP - 09/2021</p>
+                </div>
+                <div id="newsletter">
+                    <form id="newsletter-form">
+                        <p style="line-height: 0;">Être informé par mail : </p>
+                        <input type="email" id="email" name="email" placeholder="Votre email..." required>
+                        <input type="submit">
+                    </form>
+                    <p id="newsletter-wait" class="hidden">Un instant...</p>
+                    <p id="newsletter-success" class="hidden">Merci !</p>
+                    <p id="newsletter-failure" class="hidden">Service indisponible, désolé.</p>
+                    <!-- <p>C'est la meilleure façon de me soutenir !</p> -->
+                </div>
+            </div>
+            <div id="lyrics">
+                <h2 id="lyrics-title">Liar</h2>
+                <div>
+                    <p>Liar, you're nothing but a liar<br>Liar, for sure you're quite the liar<br>Can't tell who you learned from<br>A liar was not what you were to become</p>
+                    <p>You're lying to yourself everyday<br>How can you even face a mirror in the evening ?<br>And even worse, you're lying to them<br>How can you face yourself every evening ?</p>
+                    <p>You never tell anyone what's on your mind<br>'Cause you never really bothered to learn<br>You never say a word of your own<br>Don't you know that's enough to be a liar ?</p>
+                    <p>You know you can't keep on like this<br>Or you won't be able to keep your head up much longer<br>If you don't walk up to them and talk about it<br>How long will you keep your head up ?</p>
+                    <p>You never tell anyone what's on your mind<br>'Cause you never really bothered to learn<br>You never say a word of your own<br>Don't you know that's enough to be a liar ?</p>
+                    <p>I keep lying to myself every day<br>Can't even face a mirror in the evening, no more<br>And even worse, I keep lying to them<br>No I can't face myself one more night</p>
+                    <p>Liar! Liar! Liar! Liar!</p>
+                    <br>
+                    <p>© Adrien Heisch</p>
+                </div>
+            </div>
+            <div id="contact">
+                <h2>Contact</h2>
+                <form id="contact-form">
+                    <p></p>
+                    <div>
+                        <label for="from">Adresse mail</label><br>
+                        <input type="email" name="from" placeholder="Votre mail..." required>
+                    </div>
+                    <p></p>
+                    <div>
+                        <label for="content">Message</label><br>
+                        <textarea name="content" placeholder="Votre message..." required style="resize: none; height: 10em;"></textarea>
+                    </div>
+                    <input type="submit" style="float: right;">
+                </form>
+                <p id="contact-wait" class="hidden">Un instant...</p>
+                <p id="contact-success" class="hidden">Merci !</p>
+                <p id="contact-failure" class="hidden">Service indisponible, désolé.</p>
+            </div>
+        </div>
+        <div id="nav">
+            <p><span data-page="">Accueil</span></p>
+            <p><span data-page="paroles">Paroles</span></p>
+            <p><span data-page="contact">Contact</span></p>
+        </div>
+        <img id="nav-button" src="./media/nav.svg">
+        
+        <script src="./main.js"></script>
+    </body>
+</html>
