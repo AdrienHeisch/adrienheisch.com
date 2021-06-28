@@ -1,4 +1,4 @@
-const API_BASE_URL = `http://${window.location.hostname}:5000`;
+const API_BASE_URL = "https://api-adrienheisch-com.herokuapp.com";
 
 const navButton = document.getElementById("nav-button");
 const nav = document.getElementById("nav");
@@ -43,7 +43,10 @@ newsletterForm.addEventListener("submit", _ => {
 
     fetch(`${API_BASE_URL}/newsletter-subscription`, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*"
+        },
         body: JSON.stringify({ email })
     })
     .then(res => {
@@ -71,7 +74,10 @@ contactForm.addEventListener("submit", _ => {
 
     fetch(`${API_BASE_URL}/contact`, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*"
+        },
         body: JSON.stringify({ from, content })
     })
     .then(res => {
