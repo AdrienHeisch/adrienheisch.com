@@ -113,7 +113,7 @@ button, input, textarea, select {
     left: 50%;
     transform: translateX(-50%);
     width: min(25em, 80%);
-    max-height: 80%;
+    max-height: 90%;
     text-align: center;
     overflow-y: scroll;
 }
@@ -136,7 +136,7 @@ button, input, textarea, select {
     left: 50%;
     transform: translateX(-50%);
     width: min(30em, 85%);
-    max-height: 80%;
+    max-height: 90%;
     text-align: center;
     overflow-y: scroll;
 }
