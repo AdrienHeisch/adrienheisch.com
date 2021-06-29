@@ -106,11 +106,15 @@ if (mobileCheck()) {
 
 function loadPage (path) {
     let page;
-
     switch (path) {
-        case "paroles": page = "lyrics"; break;
-        case "contact": page = "contact"; break;
-        default:        page = "homepage";
+        case "about":
+        case "lyrics":
+        case "contact":
+            page = path;
+            break;
+        default:
+            page = "homepage";
+            path = "";
     }
 
     for (const el of content.children) {
