@@ -15,10 +15,6 @@ const contactFormFailure = document.getElementById("contact-failure");
 let navOpen = false;
 
 const l = window.location;
-/* let path = l.search;
-if (path.startsWith("?/")) path = path.substring(2).split("/")[0];
-else path = "";
-loadPage(path); */
 loadPage(l.pathname.substring(1));
 
 navButton.addEventListener("click", _ => {
@@ -33,7 +29,8 @@ navButton.addEventListener("click", _ => {
 
 for (const el of document.querySelectorAll("#nav>p>span")) el.addEventListener("click", _ => {
     loadPage(el.dataset.page);
-    navButton.dispatchEvent(new Event("click"));
+    nav.style.width = "0";
+    navOpen = false;
 });
 
 newsletterForm.addEventListener("submit", _ => {
@@ -131,8 +128,9 @@ function loadPage (path) {
  * @param {boolean} bool
  * */
 function hide (element, bool) {
-    if (bool && !element.classList.contains("hidden")) element.classList.add("hidden");
-    else if (!bool && element.classList.contains("hidden")) element.classList.remove("hidden");
+    // if (bool && !element.classList.contains("hidden")) element.classList.add("hidden");
+    // else if (!bool && element.classList.contains("hidden")) element.classList.remove("hidden");
+    element.hidden = bool;
 }
 
 function mobileCheck () {
