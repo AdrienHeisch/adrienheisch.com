@@ -14,12 +14,12 @@ const contactFormFailure = document.getElementById("contact-failure");
 
 let navOpen = false;
 
-const l = window.location;
-/* let path = l.search;
+/* const l = window.location;
+let path = l.search;
 if (path.startsWith("?/")) path = path.substring(2).split("/")[0];
 else path = "";
 loadPage(path); */
-loadPage(l.pathname);
+loadPage(window.location.pathname.substring(1));
 
 navButton.addEventListener("click", _ => {
     if (navOpen) {
