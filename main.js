@@ -15,10 +15,11 @@ const contactFormFailure = document.getElementById("contact-failure");
 let navOpen = false;
 
 const l = window.location;
-let path = l.search;
-/* if (path.startsWith("?/")) path = path.substring(2).split("/")[0];
-else path = ""; */
-loadPage(path);
+/* let path = l.search;
+if (path.startsWith("?/")) path = path.substring(2).split("/")[0];
+else path = "";
+loadPage(path); */
+loadPage(l.pathname);
 
 navButton.addEventListener("click", _ => {
     if (navOpen) {
