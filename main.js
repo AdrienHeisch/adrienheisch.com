@@ -16,8 +16,8 @@ let navOpen = false;
 
 const l = window.location;
 let path = l.search;
-if (path.startsWith("?/")) path = path.substring(2).split("/")[0];
-else path = "";
+/* if (path.startsWith("?/")) path = path.substring(2).split("/")[0];
+else path = ""; */
 loadPage(path);
 
 navButton.addEventListener("click", _ => {
