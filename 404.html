@@ -44,7 +44,16 @@
                 transform: translate(-50%, -50%);
                 text-align: center;
             }
+
+            #return {
+                transition: transform 0.2s ease-out;
+            }
+
+            #return:hover {
+                transform: scale(1.2);
+            }
         </style>
+        <script src="https://kit.fontawesome.com/cebd6f4122.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <div class="fill">
@@ -56,8 +65,8 @@
             />
         </div>
         <h2 id="error">
-            Page introuvable<br>
-            <a href="./" style="color: white;">Accueil</a>
+            Page introuvable<br><br>
+            <a href="./" id="return" class="fas fa-arrow-left" style="color: white; text-decoration: none;"></a>
         </h2>
     </body>
 </html>

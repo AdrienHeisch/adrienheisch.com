@@ -35,6 +35,11 @@ button, input, textarea, select {
 
 a {
     color: bisque;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 #nav-button {
@@ -68,6 +73,7 @@ a {
 }
 
 #nav > p {
+    min-width: 5em;
     padding-left: 2em;
     padding-right: 2em;
 }
@@ -93,13 +99,29 @@ a {
 }
 
 #homepage > h1 {
-    bottom: 70%;
+    bottom: 75%;
+    margin: 0;
     font-size: 2.25em;
+}
+
+#medias {
+    bottom: 65%;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.5em;
+    width: 7em;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 5px 5px;
 }
 
 #centerdiv {
     bottom: 40%;
     line-height: 0;
+}
+
+#centerdiv > p {
+    margin: 12px 0;
 }
 
 #player {
@@ -108,6 +130,43 @@ a {
 
 #newsletter {
     bottom: 15%;
+}
+
+#homepage > footer {
+    padding: 3px 0;
+    bottom: 10px;
+    width: 6em;
+    border-radius: 5px;
+    background-color: #111111;
+    font-size: 1.2em;
+}
+
+.share-button {
+    padding: 3px;
+    border-radius: 3px;
+}
+
+.share-button:hover {
+    text-decoration: none;
+}
+
+#twitter {
+    color: #1b95e0;
+}
+
+#youtube {
+    color: #b00000;
+}
+
+#facebook {
+    color: #4162a7;
+}
+
+#instagram {
+    background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%/* ,#285AEB 100% */);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 #content > *:not(#homepage) {

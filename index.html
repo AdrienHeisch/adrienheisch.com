@@ -11,6 +11,7 @@
         <link rel="manifest" href="/assets/favicon/site.webmanifest">
         <link rel="preload" href="/assets/Quicksand_Book.otf" as="font" type="font/otf" crossorigin>
         <link rel="stylesheet" href="./style.css">
+        <script src="https://kit.fontawesome.com/cebd6f4122.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <div id="background-container" class="fill">
@@ -24,6 +25,12 @@
         <div id="content">
             <section id="homepage" hidden>
                 <h1>ADRIEN HEISCH</h1>
+                <!-- <div id="medias">
+                    <a id="twitter" class="share-button fab fa-twitter" target="_blank" href="https://twitter.com/"></a>
+                    <a id="instagram" class="share-button fab fa-instagram" target="_blank" href="https://www.instagram.com/"></a>
+                    <a id="facebook" class="share-button fab fa-facebook" target="_blank" href="https://www.facebook.com/"></a>
+                    <a id="youtube" class="share-button fab fa-youtube" target="_blank" href="https://www.youtube.com/"></a>
+                </div> -->
                 <div id="centerdiv">
                     <p>1er titre - LIAR</p>
                     <audio
@@ -38,14 +45,20 @@
                 </div>
                 <div id="newsletter">
                     <form id="newsletter-form">
-                        <p>Être informé par mail : </p>
+                        <p style="margin: 0.3em auto;">Être informé par mail : </p>
                         <input type="email" id="email" name="email" placeholder="Votre email..." required>
-                        <input type="submit">
+                        <input type="submit" style="margin-top: 5px;">
                     </form>
                     <p id="newsletter-wait" hidden>Un instant...</p>
                     <p id="newsletter-success" hidden>Merci !</p>
                     <p id="newsletter-failure" hidden>Service indisponible, désolé.</p>
                 </div>
+                <footer id="footer">
+                    <i class="share-button fas fa-share-alt"></i>
+                    <span style="padding: 0.2em;"></span>
+                    <a id="twitter" class="share-button fab fa-twitter" target="_blank" href="https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Fpublish.twitter.com%2F&ref_src=twsrc%5Etfw&text=&tw_p=tweetbutton&url=https%3A%2F%2Fadrienheisch.com%0A%0A"></a>
+                    <a id="facebook" class="share-button fab fa-facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fadrienheisch.com"></a>        
+                </footer>
             </section>
             <section id="about" hidden>
                 <h2>À propos</h2>
@@ -81,12 +94,11 @@
                 <div>
                     <p>J'arrive au terme d'une formation de producteur et ingénieur du son, ce qui me permet de produire ma propre musique mais également de travailler pour d'autres artistes.</p>
                     <p>Je peux notamment m'occuper du mixage de vos projets.</p>
-                    <p>Vous pouvez me contacter <a href="./contact">ici</a>.</p>
+                    <p>N'hésitez pas à <a href="./contact">me contacter</a> !</p>
                 </div>
             </section>
             <section id="contact" hidden>
                 <h2>Contact</h2>
-                <p>N'hésitez pas !</p>
                 <form id="contact-form">
                     <p></p>
                     <div>
@@ -107,7 +119,7 @@
         </div>
         <nav id="nav">
             <p><span data-page="">Accueil</span></p>
-            <p><span data-page="about">À&#8239propos</span></p>
+            <p><span data-page="about">À&nbsppropos</span></p>
             <p><span data-page="lyrics">Paroles</span></p>
             <p><span data-page="services">Services</span></p>
             <p><span data-page="contact">Contact</span></p>
