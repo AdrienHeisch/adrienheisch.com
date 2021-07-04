@@ -160,6 +160,10 @@ a {
     text-align: left;
 }
 
+#contact > form label {
+    margin-left: 0.25em;
+}
+
 #contact > form > div > input, textarea {
     width: min(400px, 60vw);
     min-height: 2em;
