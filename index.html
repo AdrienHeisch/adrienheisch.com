@@ -22,10 +22,8 @@
             />
         </div>
         <div id="content">
-            <div id="homepage" hidden>
-                <div id="title">
-                    <h1>ADRIEN HEISCH</h1>
-                </div>
+            <section id="homepage" hidden>
+                <h1>ADRIEN HEISCH</h1>
                 <div id="centerdiv">
                     <p>1er titre - LIAR</p>
                     <audio
@@ -48,9 +46,9 @@
                     <p id="newsletter-success" hidden>Merci !</p>
                     <p id="newsletter-failure" hidden>Service indisponible, désolé.</p>
                 </div>
-            </div>
-            <div id="about" hidden>
-                <h3>À propos</h3>
+            </section>
+            <section id="about" hidden>
+                <h2>À propos</h2>
                 <p>Bonjour !</p>
                 <div>
                     <p>Je m'appelle Adrien Heisch, j'ai 22 ans, je suis auteur-compositeur, multi-instrumentiste, ingénieur du son et je me lance dans une carrière d'artiste. </p>
@@ -63,9 +61,9 @@
                     <p>À très vite,</p>
                     <p>Adrien</p>
                 </div>
-            </div>
-            <div id="lyrics" hidden>
-                <h3 id="lyrics-title">Liar</h3>
+            </section>
+            <section id="lyrics" hidden>
+                <h2 id="lyrics-title">Liar</h2>
                 <div>
                     <p>Liar, you're nothing but a liar<br>Liar, for sure you're quite the liar<br>Can't tell who you learned from<br>A liar was not what you were to become</p>
                     <p>You're lying to yourself everyday<br>How can you even face a mirror in the evening ?<br>And even worse, you're lying to them<br>How can you face yourself every evening ?</p>
@@ -77,8 +75,15 @@
                     <br>
                     <p>© Adrien Heisch</p>
                 </div>
-            </div>
-            <div id="contact" hidden>
+            </section>
+            <section id="services" hidden>
+                <h2>Services</h2>
+                <div>
+                    <p>J'arrive au terme d'une formation de producteur / ingénieur du son qui me permet de produire ma propre musique mais également de contribuer à d'autres projets.</p>
+                    <p>N'hésitez pas à <a href="./contact">me contacter</a> !</p>
+                </div>
+            </section>
+            <section id="contact" hidden>
                 <h2>Contact</h2>
                 <form id="contact-form">
                     <p></p>
@@ -96,14 +101,15 @@
                 <p id="contact-wait" hidden>Un instant...</p>
                 <p id="contact-success" hidden>Merci !</p>
                 <p id="contact-failure" hidden>Service indisponible, désolé.</p>
-            </div>
+            </section>
         </div>
-        <div id="nav">
+        <nav id="nav">
             <p><span data-page="">Accueil</span></p>
             <p><span data-page="about">À&#8239propos</span></p>
             <p><span data-page="lyrics">Paroles</span></p>
+            <p><span data-page="services">Services</span></p>
             <p><span data-page="contact">Contact</span></p>
-        </div>
+        </nav>
         <img id="nav-button" src="./media/nav.svg" alt="•">
         
         <script src="./main.js"></script>

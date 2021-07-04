@@ -107,6 +107,7 @@ function loadPage (path) {
     switch (path) {
         case "about":
         case "lyrics":
+        case "services":
         case "contact":
             page = path;
             break;
