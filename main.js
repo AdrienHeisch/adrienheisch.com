@@ -1,8 +1,10 @@
 const API_BASE_URL = "https://api-adrienheisch-com.herokuapp.com";
 
-const navButton = document.getElementById("nav-button");
 const nav = document.getElementById("nav");
+const navButton = document.getElementById("nav-button");
 const content = document.getElementById("content");
+const sharePopup = document.getElementById("share-popup");
+const sharePopupText = document.getElementById("share-popup-text");
 const newsletterForm = document.getElementById("newsletter-form");
 const newsletterFormWait = document.getElementById("newsletter-wait");
 const newsletterFormSuccess = document.getElementById("newsletter-success");
@@ -11,6 +13,8 @@ const contactForm = document.getElementById("contact-form");
 const contactFormWait = document.getElementById("contact-wait");
 const contactFormSuccess = document.getElementById("contact-success");
 const contactFormFailure = document.getElementById("contact-failure");
+const contactLink = document.getElementById("contact-link");
+const lyricsLink = document.getElementById("lyrics-link");
 
 let navOpen = false;
 
@@ -33,9 +37,14 @@ for (const el of document.querySelectorAll("#nav>p>span")) el.addEventListener("
     navOpen = false;
 });
 
+sharePopup.addEventListener("click", _ => sharePopupText.hidden = !sharePopupText.hidden);
+
+contactLink.addEventListener("click", _ => loadPage("contact"));
+lyricsLink.addEventListener("click", _ => loadPage("lyrics"));
+
 newsletterForm.addEventListener("submit", _ => {
-    hide(newsletterForm, true);
-    hide(newsletterFormWait, false);
+    newsletterForm.hidden = true;
+    newsletterFormWait.hidden = false;
 
     const email = new FormData(newsletterForm).get("email");
 
@@ -48,23 +57,23 @@ newsletterForm.addEventListener("submit", _ => {
         body: JSON.stringify({ email })
     })
     .then(res => {
-        hide(newsletterFormWait, true);
+        newsletterFormWait.hidden = true;
         if (res.ok) {
             newsletterFormSuccess.innerHTML = `${email} - ${newsletterFormSuccess.innerHTML}`
-            hide(newsletterFormSuccess, false);
-        } else hide(newsletterFormFailure, false);
+            newsletterFormSuccess.hidden = false;
+        } else newsletterFormFailure.hidden = false;
     })
     .catch(_ => {
-        hide(newsletterFormWait, true);
-        hide(newsletterFormFailure, false);
+        newsletterFormWait.hidden = true;
+        newsletterFormFailure.hidden = false;
     });
 
     event.preventDefault();
 });
 
 contactForm.addEventListener("submit", _ => {
-    hide(contactForm, true);
-    hide(contactFormWait, false);
+    contactForm.hidden = true;
+    contactFormWait.hidden = false;
 
     const formData = new FormData(contactForm);
     const from = formData.get("from");
@@ -79,13 +88,13 @@ contactForm.addEventListener("submit", _ => {
         body: JSON.stringify({ from, content })
     })
     .then(res => {
-        hide(contactFormWait, true);
-        if (res.ok) hide(contactFormSuccess, false);
-        else hide(contactFormFailure, false);
+        contactFormWait.hidden = true;
+        if (res.ok) contactFormSuccess.hidden = false;
+        else contactFormFailure.hidden = false;
     })
     .catch(_ => {
-        hide(contactFormWait, true);
-        hide(contactFormFailure, false);
+        contactFormWait.hidden = true;
+        contactFormFailure.hidden = false;
     });
 
     event.preventDefault();
@@ -117,21 +126,11 @@ function loadPage (path) {
     }
 
     for (const el of content.children) {
-        if (el.id == page) hide(el, false);
-        else hide(el, true);
+        if (el.id == page) el.hidden = false;
+        else el.hidden = true;
     }
 
     window.history.replaceState(null, null, l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') + '/' + path);
-}
-
-/**
- * @param {HTMLElement} element
- * @param {boolean} bool
- * */
-function hide (element, bool) {
-    // if (bool && !element.classList.contains("hidden")) element.classList.add("hidden");
-    // else if (!bool && element.classList.contains("hidden")) element.classList.remove("hidden");
-    element.hidden = bool;
 }
 
 function mobileCheck () {

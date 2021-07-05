@@ -25,14 +25,14 @@
         <div id="content">
             <section id="homepage" hidden>
                 <h1>ADRIEN HEISCH</h1>
-                <!-- <div id="medias">
+                <div id="medias" style="display: none;">
                     <a id="twitter" class="share-button fab fa-twitter" target="_blank" href="https://twitter.com/"></a>
                     <a id="instagram" class="share-button fab fa-instagram" target="_blank" href="https://www.instagram.com/"></a>
                     <a id="facebook" class="share-button fab fa-facebook" target="_blank" href="https://www.facebook.com/"></a>
                     <a id="youtube" class="share-button fab fa-youtube" target="_blank" href="https://www.youtube.com/"></a>
-                </div> -->
+                </div>
                 <div id="centerdiv">
-                    <p>1er titre - LIAR</p>
+                    <p>1er titre - <span id="lyrics-link" class="a">LIAR</span></p>
                     <audio
                         id="player"
                         controls
@@ -69,7 +69,19 @@
                     <p><cite>Liar</cite> est une chanson rock écrite en anglais, mais j'écris également en français, toujours en recherchant la qualité du texte comme de la musique.</p>
                     <p>Vous pouvez vous inscrire sur la page d'accueil à ma liste de mail pour être tenu au courant de la sortie de l'EP et de tout ce qui viendra ensuite.</p>
                     <br>
-                    <p>Pensez aussi à partager ce site autour de vous,<br>la musique se vit ensemble !</p>
+                    <p>
+                        Pensez aussi à
+                        <span id="share-popup" class="a">
+                            partager
+                            <span id="share-popup-text" hidden>
+                                <i class="share-button fas fa-share-alt"></i>
+                                <span style="padding: 0.2em;"></span>
+                                <a id="twitter" class="share-button fab fa-twitter" target="_blank" href="https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Fpublish.twitter.com%2F&ref_src=twsrc%5Etfw&text=&tw_p=tweetbutton&url=https%3A%2F%2Fadrienheisch.com%0A%0A"></a>
+                                <a id="facebook" class="share-button fab fa-facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fadrienheisch.com"></a>                    
+                            </span>
+                        </span>
+                        ce site autour de vous,<br>la musique se vit ensemble !
+                    </p>
                     <br>
                     <p>À très vite,</p>
                     <p>Adrien</p>
@@ -91,10 +103,11 @@
             </section>
             <section id="services" hidden>
                 <h2>Services</h2>
+                <p>&nbsp;</p>
                 <div>
                     <p>J'arrive au terme d'une formation de producteur et ingénieur du son, ce qui me permet de produire ma propre musique mais également de travailler pour d'autres artistes.</p>
                     <p>Je peux notamment m'occuper du mixage de vos projets.</p>
-                    <p>N'hésitez pas à <a href="./contact">me contacter</a> !</p>
+                    <p>N'hésitez pas à <span id="contact-link" class="a">me contacter</span> !</p>
                 </div>
             </section>
             <section id="contact" hidden>
