@@ -14,12 +14,12 @@ const contactFormWait = document.getElementById("contact-wait");
 const contactFormSuccess = document.getElementById("contact-success");
 const contactFormFailure = document.getElementById("contact-failure");
 const contactLink = document.getElementById("contact-link");
-const lyricsLink = document.getElementById("lyrics-link");
 
 let navOpen = false;
 
 const l = window.location;
-loadPage(l.pathname.substring(1));
+window.onpopstate = _ => loadPage(l.pathname.substring(1), true);
+window.onpopstate();
 
 navButton.addEventListener("click", _ => {
     if (navOpen) {
@@ -40,7 +40,6 @@ for (const el of document.querySelectorAll("#nav>p>span")) el.addEventListener("
 sharePopup.addEventListener("click", _ => sharePopupText.hidden = !sharePopupText.hidden);
 
 contactLink.addEventListener("click", _ => loadPage("contact"));
-lyricsLink.addEventListener("click", _ => loadPage("lyrics"));
 
 newsletterForm.addEventListener("submit", _ => {
     newsletterForm.hidden = true;
@@ -111,7 +110,7 @@ if (mobileCheck()) {
     });
 }
 
-function loadPage (path) {
+function loadPage (path, replace = false) {
     let page;
     switch (path) {
         case "about":
@@ -126,11 +125,13 @@ function loadPage (path) {
     }
 
     for (const el of content.children) {
-        if (el.id == page) el.hidden = false;
+        if (el.id === page) el.hidden = false;
         else el.hidden = true;
     }
 
-    window.history.replaceState(null, null, l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') + '/' + path);
+    const url = l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') + '/' + path;
+    if (replace) window.history.replaceState(null, null, url);
+    else window.history.pushState(null, null, url);
 }
 
 function mobileCheck () {
