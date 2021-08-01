@@ -89,7 +89,7 @@ a:hover, .a:hover {
     text-align: center;
     white-space: nowrap;
     position: fixed;
-    padding-left: 2em;
+    padding-left: 0.9em;
     bottom: 2em;
 }
 
