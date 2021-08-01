@@ -133,12 +133,25 @@ a:hover, .a:hover {
     bottom: 15%;
 }
 
-#homepage > footer {
-    bottom: 10px;
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+footer > div:first-child {
+    display: inline;
     padding: 3px 5px;
     border-radius: 5px;
     background-color: #111111;
     font-size: 1.2em;
+}
+
+footer > div:last-child {
+    line-height: 2em;
+    font-size: 0.7em;
 }
 
 .share-button {
@@ -175,8 +188,9 @@ a:hover, .a:hover {
     left: 50%;
     transform: translateX(-50%);
     top: 10%;
-    max-height: 90%;
+    max-height: 80%;
     overflow-y: scroll;
+    scrollbar-width: none;
 }
 
 #about {
@@ -195,39 +209,6 @@ a:hover, .a:hover {
     margin-bottom: 0em;
 }
 
-#share-popup {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-}
-
-#share-popup-text {
-    text-align: center;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%;
-    left: 50%;
-    transform: translateX(-50%);
-    white-space: nowrap;
-    color: white;
-
-    padding: 3px 5px;
-    border-radius: 5px;
-    background-color: #111111;
-    font-size: 1.2em;
-}
-
-#share-popup-text::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #111111 transparent transparent transparent;
-}
-
 #lyrics {
     width: min(30em, 85%);
 }
@@ -236,11 +217,11 @@ a:hover, .a:hover {
     font-size: 0.9em;
 }
 
-#services {
+#mix {
     width: min(25em, 80%);
 }
 
-#services > div {
+#mix > div {
     font-size: 0.9em;
     line-height: 1.3em;
 }

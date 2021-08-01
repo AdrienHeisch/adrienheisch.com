@@ -37,8 +37,6 @@ for (const el of document.querySelectorAll("#nav>p>span")) el.addEventListener("
     navOpen = false;
 });
 
-sharePopup.addEventListener("click", _ => sharePopupText.hidden = !sharePopupText.hidden);
-
 contactLink.addEventListener("click", _ => loadPage("contact"));
 
 newsletterForm.addEventListener("submit", _ => {
@@ -115,7 +113,7 @@ function loadPage (path, replace = false) {
     switch (path) {
         case "about":
         case "lyrics":
-        case "services":
+        case "mix":
         case "contact":
             page = path;
             break;
