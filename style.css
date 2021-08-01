@@ -3,10 +3,6 @@
     src: url("./assets/Quicksand_Book.otf") format("opentype");
 }
 
-/* .hidden {
-    display: none;
-} */
-
 .fill {
     position: absolute;
     top: 0;
@@ -48,6 +44,7 @@ a:hover, .a:hover {
     top: 50px;
     right: 25px;
     transition: transform 0.2s ease-out;
+    cursor: pointer;
 }
 
 #nav-button:hover {
@@ -67,7 +64,7 @@ a:hover, .a:hover {
     height: 100%;
     padding-top: 150px;
     overflow: hidden;
-    background: rgb(96, 96, 96);
+    background: rgb(85, 80, 80);
     transition: width 0.5s ease-in-out;
     text-align: right;
     user-select: none;
@@ -81,10 +78,19 @@ a:hover, .a:hover {
 
 #nav > p > span {
     transition: padding 0.1s ease-in-out;
+    cursor: pointer;
 }
 
 #nav > p > span:hover {
     padding-right: 1em;
+}
+
+#nav > div {
+    text-align: center;
+    white-space: nowrap;
+    position: fixed;
+    padding-left: 2em;
+    bottom: 2em;
 }
 
 #background {
@@ -100,24 +106,58 @@ a:hover, .a:hover {
 }
 
 #homepage > h1 {
-    bottom: 75%;
+    bottom: 80%;
     margin: 0;
     font-size: 2.25em;
 }
 
-#medias {
-    bottom: 65%;
+#box {
+    bottom: 57.5%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 10px 5px 5px 5px ;
+}
+
+.medias {
     display: flex;
     justify-content: space-evenly;
     font-size: 1.5em;
     width: 7em;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    padding: 5px 5px;
+}
+
+.share-button {
+    padding: 3px;
+    border-radius: 3px;
+}
+
+.share-button:hover {
+    text-decoration: none;
+}
+
+#spotify { color: #1ed760; }
+#twitter { color: #1b95e0; }
+#youtube { color: #b00000; }
+#facebook { color: #4162a7; }
+#apple {
+    background-color: #fa243c;
+    width: 1em;
+    transform: scale(0.7);
+}
+#instagram {
+    background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#deezer {
+    background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 #centerdiv {
-    bottom: 40%;
+    bottom: 35%;
     line-height: 0;
 }
 
@@ -131,55 +171,6 @@ a:hover, .a:hover {
 
 #newsletter {
     bottom: 15%;
-}
-
-footer {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-}
-
-footer > div:first-child {
-    display: inline;
-    padding: 3px 5px;
-    border-radius: 5px;
-    background-color: #111111;
-    font-size: 1.2em;
-}
-
-footer > div:last-child {
-    line-height: 2em;
-    font-size: 0.7em;
-}
-
-.share-button {
-    padding: 3px;
-    border-radius: 3px;
-}
-
-.share-button:hover {
-    text-decoration: none;
-}
-
-#twitter {
-    color: #1b95e0;
-}
-
-#youtube {
-    color: #b00000;
-}
-
-#facebook {
-    color: #4162a7;
-}
-
-#instagram {
-    background: #d6249f;
-    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%/* ,#285AEB 100% */);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 #content > *:not(#homepage) {
@@ -241,4 +232,26 @@ footer > div:last-child {
 #contact > form > div > input, textarea {
     width: min(400px, 60vw);
     min-height: 2em;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+footer > div:first-child {
+    display: inline;
+    padding: 3px 5px;
+    border-radius: 5px;
+    background-color: #111111;
+    font-size: 1.2em;
+}
+
+footer > div:last-child {
+    padding-top: 5px;
+    padding-bottom: 3px;
+    font-size: 0.7em;
 }
