@@ -112,7 +112,7 @@ a:hover, .a:hover {
 }
 
 #box {
-    bottom: 57.5%;
+    bottom: 60%;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     padding: 10px 5px 5px 5px ;
@@ -157,7 +157,7 @@ a:hover, .a:hover {
 }
 
 #centerdiv {
-    bottom: 35%;
+    bottom: 27.5%;
     line-height: 0;
 }
 
