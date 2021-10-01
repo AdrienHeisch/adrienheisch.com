@@ -1,4 +1,4 @@
-const API_BASE_URL = "http://localhost:5000";//"https://api-adrienheisch-com.herokuapp.com";
+const API_BASE_URL = "https://api-adrienheisch-com.herokuapp.com";
 
 const nav = document.getElementById("nav");
 const navButton = document.getElementById("nav-button");
