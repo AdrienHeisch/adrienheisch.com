@@ -26,25 +26,28 @@
         <div id="content">
             <section id="homepage" hidden>
                 <h1>ADRIEN HEISCH</h1>
-                <div id="box" style="display: none;"> <!-- PAGES ARE WIP -->
+                <div id="box"> <!-- PAGES ARE WIP -->
                     <a target="_blank" href="https://adrienheisch.bandcamp.com"><img src="./assets/bandcamp.svg" alt="Bandcamp" style="margin-bottom: 0.25em;"></a>
                     <div class="medias">
-                        <a id="twitter" class="share-button fab fa-twitter" target="_blank" href="https://twitter.com/AdrienHeisch"></a>
+                        <span id="twitter" class="share-button fab fa-twitter" target="_blank" href="https://twitter.com/AdrienHeisch"></span>
                         <a id="instagram" class="share-button fab fa-instagram" target="_blank" href="https://www.instagram.com/adrienheisch/"></a>
-                        <a id="facebook" class="share-button fab fa-facebook" target="_blank" href="https://www.facebook.com/Adrien-Heisch-106356768410344"></a>
-                        <a id="youtube" class="share-button fab fa-youtube" target="_blank" href="https://www.youtube.com/channel/UCEcqJcdwZYgyqCzFULT-bRA"></a>
+                        <!-- <span id="facebook" class="share-button fab fa-facebook" target="_blank" href="https://www.facebook.com/Adrien-Heisch-106356768410344"></span> -->
+                        <span id="youtube" class="share-button fab fa-youtube" target="_blank" href="https://www.youtube.com/channel/UCEcqJcdwZYgyqCzFULT-bRA"></span>
+                        <a id="soundcloud" class="share-button fab fa-soundcloud" target="_blank" href="https://soundcloud.com/adrienheisch"></a>
                     </div>
                     <div class="medias">
-                        <a id="spotify" class="share-button fab fa-spotify" target="_blank" href="https://spotify.com/"></a>
-                        <a id="deezer" class="share-button fab fa-deezer" target="_blank" href="https://deezer.com/"></a>
-                        <a id="apple" class="share-button fab fa-itunes-note" target="_blank" href="https://music.apple.com/"></a>
+                        <a id="spotify" class="share-button fab fa-spotify" title="Spotify" href="https://open.spotify.com/artist/49dkIKiQ8KH005tE9TtFyo"></a>
+                        <a id="deezer" class="share-button fab fa-deezer" title="Deezer" href="https://www.deezer.com/fr/artist/146937102"></a>
+                        <a id="apple" class="share-button fab fa-itunes-note" target="_blank" href="https://music.apple.com/fr/artist/adrien-heisch/1588080985"></a>
                     </div>
                 </div>
                 <div id="centerdiv">
-                    <p>1er EP - 09/2021</p>
-                    <iframe style="border: 0; width: 170px; height: 170px;" src="https://bandcamp.com/EmbeddedPlayer/album=411865245/size=large/bgcol=333333/linkcol=4ec5ec/minimal=true/transparent=true/" seamless><a href="https://adrienheisch.bandcamp.com/album/whats-on-your-mind">What&#39;s on your mind by Adrien Heisch</a></iframe>
-                </div>
-                <div id="newsletter">
+                    <iframe id="bandcamp-mobile" style="border: 0; width: 170px; height: 170px; display: none;" src="https://bandcamp.com/EmbeddedPlayer/album=411865245/size=large/bgcol=333333/linkcol=4ec5ec/minimal=true/transparent=true/" seamless><a href="https://adrienheisch.bandcamp.com/album/whats-on-your-mind">What&#39;s on your mind by Adrien Heisch</a></iframe>
+                    <div id="bandcamp-desktop" style="display: none;">
+                        <p>Premier EP disponible !</p>
+                        <iframe style="border: 0; width: 500px; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=411865245/size=large/bgcol=333333/linkcol=4ec5ec/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://adrienheisch.bandcamp.com/album/whats-on-your-mind">What&#39;s on your mind by Adrien Heisch</a></iframe>                </div>
+                    </div>
+                    <div id="newsletter">
                     <form id="newsletter-form">
                         <p style="margin: 0.3em auto;">Être informé par mail : </p>
                         <input type="email" id="email" name="email" placeholder="Votre email..." required>
@@ -60,9 +63,8 @@
                 <p>Bonjour !</p>
                 <div>
                     <p>Je m'appelle Adrien Heisch, j'ai 22 ans, je suis auteur-compositeur multi-instrumentiste et je me lance dans une carrière d'artiste. </p>
-                    <p>Vous pouvez écouter sur la page d'accueil le premier titre de mon premier EP, à paraître au début de l'automne.</p>
-                    <p>J'écris en français et en anglais, dans un esprit globalement rock sans trop s'y limiter. Mes influences sont Stephan Eicher (et Philippe Djian !), les Red Hot Chili Peppers, Astonvilla, Supertramp, Neil Young, Ben Harper, The Beatles, Julien Doré, The Raconteurs, Téléphone...</p>
-                    <p>Vous pouvez vous inscrire sur la page d'accueil à ma liste de mail pour être tenu au courant de la sortie de l'EP et de tout ce qui viendra ensuite.</p>
+                    <p>J'écris en français et en anglais, dans un esprit globalement rock sans trop s'y limiter. Mes influences sont Stephan Eicher, les Red Hot Chili Peppers, Astonvilla, Supertramp, Neil Young, Ben Harper, The Beatles, Julien Doré, The Raconteurs, Téléphone...</p>
+                    <p>Mon premier EP "What's on your mind" est disponible sur les plateformes de streaming et à l'achat sur Bandcamp, vous pouvez vous inscrire à ma liste de mail et me suivre sur Instagram pour être tenu au courant de ce qui viendra ensuite.</p>
                     <br>
                     <p>Pensez aussi à partager ma musique autour de vous si vous souhaitez me soutenir, merci !</p>
                     <br>
@@ -81,8 +83,43 @@
                     <p>I keep lying to myself every day<br>Can't even face a mirror in the evening, no more<br>And even worse, I keep lying to them<br>No I can't face myself one more night</p>
                     <p>Liar! Liar! Liar! Liar!</p>
                 </div>
+                <br><br><br>
+                <h2 id="lyrics-title">Elle m'appartient</h2>
+                <div>
+                    <p>Elle m'appartient<br>Je crois que je n'pourrais mourir que d'elle<br>Quand je deviens sien<br>Je sens tomber mes ailes</p>
+                    <p>Je n'suis plus vraiment moi même avec elle<br>Toutes mes blessures se réveillent<br>Mais quand je sens sa peau froide contre la mienne<br>La douleur s'évapore<br>Ou se décuple peut-être</p>
+                    <p>Mais quand elle me prend, ça me serre<br>Elle me tire les cheveux<br>Elle m'enterre<br>Colère</p>
+                    <p>Je n'l'ai jamais présentée<br>Je préfère la garder pour moi<br>Elle chevauche mon esprit, elle sait où me toucher<br>Pour que les murs tremblent, me tiennent éveillé</p>
+                    <p>Mais quand elle me prend, ça me serre<br>Elle me tire les cheveux<br>Elle m'enterre<br>Colère</p>
+                    <p>Ah la belle Colère<br>Me tenait au lit toute la vie<br>Je n'avais pas grand-chose à faire<br>Assouvir tous ses désir</p>
+                    <p>Mais elle m'a tendu un miroir<br>Et j'ai compris peut-être un peu trop tard<br>Que je n'avais rien<br>Rien à y faire<br>Glissant ses mains sur mon visage<br>Comme un serpent coule sur la roche<br>Ah, pourquoi m'avoir retourné contre moi<br>Comme ça ?<br>Mais je ne regrette pas qu'elle ait laissé une trace aussi nette<br>Dans mon sable</p>
+                    <p>Elle m'appartient<br>Elle m'appartient</p>
+                </div>
+                <br><br><br>
+                <h2 id="lyrics-title">Erodes</h2>
+                <div>
+                    <p>Les idées noires<br>L’eau qui m’emporte<br>Du mal à croire<br>Que l’on s’en sorte<br>Mais toi tout ça tu ne l’entends pas</p>
+                    <p>Toi qui me troubles<br>Toi qui m’enlèves<br>Oh mon a-<br>N’est pas si clair<br>Mais c’est pas ça qui me tombera<br>J’en ai vu peu<br>Mais ça ira</p>
+                    <p>Tu m’érodes<br>Eros m’a foutu à l’eau, cet escroc<br>Mais quand les ponts se coupent<br>C’est lui qui me donne mon souffle</p>
+                    <p>Mais l’eau me tue<br>Polit mes sens<br>Elle dévale les rues<br>Quand tu danses</p>
+                    <p>Tout pour te voir<br>Te voir plus forte<br>Mais viens t’asseoir<br>Ouvre mes portes<br>À la lumière à<br>Ce qui me noie</p>
+                    <p>Jamais ne touche<br>Jamais ne serre<br>Oh mon a-<br>Dis moi quoi faire<br>C’est peut-être ça qui me tombera<br>Je sais pas ce qu’on veut<br>Ni toi ni moi</p>
+                    <p>Tu m’érodes<br>Eros m’a foutu à l’eau, cet escroc<br>Mais quand les ponts se coupent<br>C’est lui qui me donne mon souffle</p>
+                </div>
+                <br><br><br>
+                <h2 id="lyrics-title">It's physical</h2>
+                <div>
+                    <p>I can see what lies deep in your eyes<br>I know that you know that I know<br>Can't tell you how much I'd love to break this wall<br>But I can't</p>
+                    <p>It's physical<br>It's physical</p>
+                    <p>I know, I know I should go for it right now<br>She knows, she knows but I hit the wall in slow-mo'<br>We know, we know that we can't afford to wait more<br>But I just cannot put into words<br>The simplest thought on Earth</p>
+                    <p>I can't stand frustrating you like this<br>But I can't move, I'm frozen<br>Once again the wound's wide open<br>And I feel the pain</p>
+                    <p>It's physical<br>It's physical</p>
+                    <p>I know, I know I should go for it right now<br>She knows, she knows but I hit the wall in slow-mo'<br>We know, we know that we can't afford to wait more<br>But I just cannot put into words<br>The simplest thought on Earth</p>
+                    <p>It's physical<br>It's physical<br>Everything<br>Everything but me</p>
+                    <p>For I can touch no mind, no body<br>I'm a ghost<br>I'm a ghost</p>
+                </div>
             </section>
-            <section id="mix" hidden>
+            <!-- <section id="mix" hidden>
                 <h2>Mixage</h2>
                 <p>&nbsp;</p>
                 <div>
@@ -90,7 +127,7 @@
                     <p>Je peux notamment m'occuper du mixage de vos projets.</p>
                     <p>N'hésitez pas à <span id="contact-link" class="a">me contacter</span> !</p>
                 </div>
-            </section>
+            </section> -->
             <section id="contact" hidden>
                 <h2>Contact</h2>
                 <form id="contact-form">
@@ -110,24 +147,30 @@
                 <p id="contact-success" hidden>Merci !</p>
                 <p id="contact-failure" hidden>Service indisponible, désolé.</p>
             </section>
+            <section id="codes" style="top: 50%; transform: translate(-50%, -50%);" hidden>
+                <button id="code-button">Générer un code</button>
+                <p id="code-wait" hidden>Un instant...</p>
+                <p id="code-success" hidden>Votre code : xxxx-xxxx<br>Utilisez le ici : <a href="https://adrienheisch.bandcamp.com/yum" target="_blank">https://adrienheisch.bandcamp.com/yum</a></p>
+                <p id="code-failure" hidden>Il n'y a plus de codes disponibles, désolé.</p>
+            </section>
         </div>
         
         <footer>
-            <div>
+            <!-- <div style="display: none;">
                 <i class="share-button fas fa-share-alt"></i>
                 <span style="padding: 0.1em;"></span>
-                <a id="twitter" class="share-button fab fa-twitter" target="_blank" href="https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Fpublish.twitter.com%2F&ref_src=twsrc%5Etfw&text=&tw_p=tweetbutton&url=https%3A%2F%2Fadrienheisch.com%0A%0A"></a>
-                <a id="facebook" class="share-button fab fa-facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fadrienheisch.com"></a>    
-            </div>
+                <span id="twitter" class="share-button fab fa-twitter" target="_blank" href="https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Fpublish.twitter.com%2F&ref_src=twsrc%5Etfw&text=&tw_p=tweetbutton&url=https%3A%2F%2Fadrienheisch.com%0A%0A"></span>
+                <span id="facebook" class="share-button fab fa-facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fadrienheisch.com"></span>    
+            </div> -->
             <div>© 2021 Adrien Heisch</div>
         </footer>
         <nav id="nav">
             <p><span data-page="">Accueil</span></p>
             <p><span data-page="about">À&nbsppropos</span></p>
             <p><span data-page="lyrics">Paroles</span></p>
-            <p><span data-page="mix">Mixage</span></p>
+            <!-- <p><span data-page="mix">Mixage</span></p> -->
             <p><span data-page="contact">Contact</span></p>
-            <div style="display: none;"> <!-- WIP -->
+            <div>
                 Vous pouvez me soutenir<br>
                 en partageant ma musique<br>
                 et en l'achetant sur<br>

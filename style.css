@@ -135,13 +135,18 @@ a:hover, .a:hover {
 }
 
 #spotify { color: #1ed760; }
-#twitter { color: #1b95e0; }
-#youtube { color: #b00000; }
-#facebook { color: #4162a7; }
+#twitter { color: #303030; }
+/* #twitter { color: #1b95e0; } */
+#youtube { color: #303030; }
+/* #youtube { color: #b00000; } */
+#facebook { color: #303030; }
+/* #facebook { color: #4162a7; } */
+#soundcloud { color: #ffaa60; }
 #apple {
     background-color: #fa243c;
     width: 1em;
     transform: scale(0.7);
+    color: white;
 }
 #instagram {
     background: #d6249f;
@@ -157,7 +162,7 @@ a:hover, .a:hover {
 }
 
 #centerdiv {
-    bottom: 27.5%;
+    bottom: 30%;
     line-height: 0;
 }
 

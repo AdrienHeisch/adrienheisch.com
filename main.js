@@ -1,4 +1,4 @@
-const API_BASE_URL = "https://api-adrienheisch-com.herokuapp.com";
+const API_BASE_URL = "http://localhost:5000";//"https://api-adrienheisch-com.herokuapp.com";
 
 const nav = document.getElementById("nav");
 const navButton = document.getElementById("nav-button");
@@ -13,7 +13,11 @@ const contactForm = document.getElementById("contact-form");
 const contactFormWait = document.getElementById("contact-wait");
 const contactFormSuccess = document.getElementById("contact-success");
 const contactFormFailure = document.getElementById("contact-failure");
-const contactLink = document.getElementById("contact-link");
+// const contactLink = document.getElementById("contact-link");
+const codeButton = document.getElementById("code-button");
+const codeWait = document.getElementById("code-wait");
+const codeSuccess = document.getElementById("code-success");
+const codeFailure = document.getElementById("code-failure");
 
 let navOpen = false;
 
@@ -37,7 +41,7 @@ for (const el of document.querySelectorAll("#nav>p>span")) el.addEventListener("
     navOpen = false;
 });
 
-contactLink.addEventListener("click", _ => loadPage("contact"));
+// contactLink.addEventListener("click", _ => loadPage("contact"));
 
 newsletterForm.addEventListener("submit", _ => {
     newsletterForm.hidden = true;
@@ -96,6 +100,43 @@ contactForm.addEventListener("submit", _ => {
 
     event.preventDefault();
 });
+
+codeButton.addEventListener("click", _ => {
+    codeButton.hidden = true;
+
+    let code = localStorage.getItem("code");
+    
+    function success () {
+        codeSuccess.innerHTML = codeSuccess.innerHTML.replace("xxxx-xxxx", code);
+        codeSuccess.hidden = false;
+    }
+
+    if (code === null) {
+        codeWait.hidden = false;
+        fetch(`${API_BASE_URL}/code`, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+                "Access-Control-Allow-Origin": "*"
+            },
+        })
+        .then(res => {
+            if (res.ok) return res.text();
+            throw new Error();
+        })
+        .then(_code => {
+            code = _code;
+            localStorage.setItem("code", _code);
+            codeWait.hidden = true;
+            success();
+        })
+        .catch(_ => {
+            codeWait.hidden = true;
+            codeFailure.hidden = false;
+            return;
+        });
+    } else success();
+});
     
 if (mobileCheck()) {
     document.addEventListener('DOMContentLoaded', _ => {
@@ -106,6 +147,10 @@ if (mobileCheck()) {
             elem.style.bottom = `${window.innerHeight - elem.offsetTop - elem.clientHeight}px`;
         };
     });
+
+    document.getElementById("bandcamp-mobile").style.display = "block";
+} else {
+    document.getElementById("bandcamp-desktop").style.display = "block";
 }
 
 function loadPage (path, replace = false) {
@@ -113,8 +158,9 @@ function loadPage (path, replace = false) {
     switch (path) {
         case "about":
         case "lyrics":
-        case "mix":
+        // case "mix":
         case "contact":
+        case "codes":
             page = path;
             break;
         default:
