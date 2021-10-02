@@ -165,8 +165,19 @@ a:hover, .a:hover {
     line-height: 0;
 }
 
-#centerdiv > p {
-    margin: 12px 0;
+#centerdiv > * {
+    /* position: absolute; */
+    /* bottom: 50%; */
+    /* right: 50%; */
+    /* transform: translate(50%, 0%); */
+}
+
+#bandcamp-mobile {
+    /* height: 10vh; */
+    /* position: absolute; */
+    /* bottom: 50%; */
+    /* right: 50%; */
+    /* transform: translate(50%, -50%); */
 }
 
 #player {
