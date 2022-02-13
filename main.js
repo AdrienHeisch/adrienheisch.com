@@ -148,7 +148,7 @@ if (mobileCheck()) {
         };
     });
 
-    document.getElementById("bandcamp-mobile").style.display = "block";
+    // document.getElementById("bandcamp-mobile").style.display = "block";
 } else {
     document.getElementById("bandcamp-desktop").style.display = "block";
 }
