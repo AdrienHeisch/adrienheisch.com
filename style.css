@@ -172,8 +172,20 @@ a:hover, .a:hover {
     -webkit-text-fill-color: transparent;
 }
 
+#youtube-link {
+    width: 100px;
+    height: 30px;
+}
+
+#youtube-link > * {
+    position: absolute;
+    /* top: 50%; */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 #centerdiv {
-    bottom: 10%;
+    bottom: 30%;
     line-height: 0;
 }
 
@@ -197,7 +209,7 @@ a:hover, .a:hover {
 }
 
 #newsletter {
-    bottom: 10%;
+    bottom: 15%;
 }
 
 #content > *:not(#homepage) {
