@@ -28,9 +28,11 @@ window.onpopstate();
 navButton.addEventListener("click", _ => {
     if (navOpen) {
         nav.style.width = "0";
+        content.style.color = "white";
         navOpen = false;
     } else {
-        nav.style.width = "15em";
+        nav.style.width = "17em";
+        content.style.color = "#999999";
         navOpen = true;
     }
 });
@@ -148,7 +150,7 @@ if (mobileCheck()) {
         };
     });
 
-    // document.getElementById("bandcamp-mobile").style.display = "block";
+    document.getElementById("bandcamp-mobile").style.display = "block";
 } else {
     document.getElementById("bandcamp-desktop").style.display = "block";
 }

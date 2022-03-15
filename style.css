@@ -16,6 +16,7 @@
 }
 
 html {
+    background-color: black;
     color: white;
     font-family: Quicksand;
 }
@@ -64,7 +65,8 @@ a:hover, .a:hover {
     height: 100%;
     padding-top: 150px;
     overflow: hidden;
-    background: rgb(85, 80, 80);
+    background: linear-gradient(90deg, rgba(34, 32, 32, 0) 0%, rgba(34, 32, 32, 0.7) 15%, rgba(34, 32, 32, 0.8) 100%);
+    /* background: rgba(34, 32, 32, 0.9); */
     transition: width 0.5s ease-in-out;
     text-align: right;
     user-select: none;
@@ -86,10 +88,12 @@ a:hover, .a:hover {
 }
 
 #nav > div {
+    position: fixed;
+    /* padding-left: 0.9em; */
+    padding-left: 2.5em;
+    padding-right: 2em;
     text-align: center;
     white-space: nowrap;
-    position: fixed;
-    padding-left: 0.9em;
     bottom: 2em;
 }
 
@@ -125,17 +129,18 @@ a:hover, .a:hover {
 }
 
 #box {
-    bottom: 55%;
+    bottom: 50%;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     padding: 10px 5px 5px 5px ;
 }
 
-.medias {
+.medias-row {
     display: flex;
     justify-content: space-evenly;
     font-size: 1.5em;
     width: 7.5em;
+    height: 30px;
 }
 
 .share-button {
@@ -154,7 +159,8 @@ a:hover, .a:hover {
 /* #facebook { color: #4162a7; } */
 #soundcloud { color: #ffaa60; }
 #apple {
-    background-color: #fa243c;
+    background: rgb(250,36,60);
+    background: linear-gradient(0deg, rgba(250,36,60,1) 0%, rgba(250,36,60,1) 50%, rgba(255,94,112,1) 100%);
     width: 1em;
     transform: scale(0.7);
     color: white;
@@ -168,6 +174,7 @@ a:hover, .a:hover {
 #deezer {
     background: #d6249f;
     background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%);
+    background-clip: inherit;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -185,7 +192,7 @@ a:hover, .a:hover {
 }
 
 #centerdiv {
-    bottom: 30%;
+    bottom: 25%;
     line-height: 0;
 }
 
@@ -209,7 +216,11 @@ a:hover, .a:hover {
 }
 
 #newsletter {
-    bottom: 15%;
+    bottom: 10%;
+}
+
+#content {
+    transition: color 0.5s ease-in-out;
 }
 
 #content > *:not(#homepage) {
@@ -294,7 +305,7 @@ footer > div:first-child {
     display: inline;
     padding: 3px 5px;
     border-radius: 5px;
-    background-color: #111111;
+    /* background-color: #111111; */
     font-size: 1.2em;
 }
 
