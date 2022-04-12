@@ -32,7 +32,7 @@ navButton.addEventListener("click", _ => {
         navOpen = false;
     } else {
         nav.style.width = "17em";
-        content.style.color = "#999999";
+        if (mobileCheck()) content.style.color = "#999999";
         navOpen = true;
     }
 });
@@ -40,6 +40,7 @@ navButton.addEventListener("click", _ => {
 for (const el of document.querySelectorAll("#nav>p>span")) el.addEventListener("click", _ => {
     loadPage(el.dataset.page);
     nav.style.width = "0";
+    content.style.color = "white";
     navOpen = false;
 });
 
