@@ -155,8 +155,8 @@ a:hover, .a:hover {
 #spotify { color: #1ed760; }
 #twitter { color: #1b95e0; }
 #youtube { color: #b00000; }
-#facebook { color: #303030; }
-/* #facebook { color: #4162a7; } */
+/* #facebook { color: #303030; } */
+#facebook { color: #4162a7; }
 #soundcloud { color: #ffaa60; }
 #apple {
     background: rgb(250,36,60);
