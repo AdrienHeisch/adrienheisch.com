@@ -3,7 +3,7 @@
     <head>
         <title>Adrien Heisch - Site Officiel</title>
         <meta charset="UTF-8">
-        <meta name="description" content="Site officiel d'Adrien Heisch - premier titre disponible ici, premier EP cet automne.">
+        <meta name="description" content="Site officiel d'Adrien Heisch - premier EP What's on your mind disponible sur toutes les plateformes.">
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
         <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
@@ -65,7 +65,7 @@
                     </form>
                     <p id="newsletter-wait" hidden>Un instant...</p>
                     <p id="newsletter-success" hidden>Merci !</p>
-                    <p id="newsletter-failure" hidden>Service indisponible, désolé.</p>
+                <p id="newsletter-failure" hidden>Une erreur est survenue, désolé.</p>
                 </div>
             </section>
             <section id="about" hidden>
@@ -155,13 +155,18 @@
                 </form>
                 <p id="contact-wait" hidden>Un instant...</p>
                 <p id="contact-success" hidden>Merci !</p>
-                <p id="contact-failure" hidden>Service indisponible, désolé.</p>
+            <p id="contact-failure" hidden>Une erreur est survenue, désolé.</p>
             </section>
             <section id="codes" style="top: 50%; transform: translate(-50%, -50%); padding: 10px;" hidden>
                 <div id="code-button">Générer un code</div>
                 <p id="code-wait" hidden>Un instant...</p>
-                <p id="code-success" hidden>Votre code : xxxx-xxxx<br>Utilisez le ici : <a href="https://adrienheisch.bandcamp.com/yum" target="_blank">https://adrienheisch.bandcamp.com/yum</a></p>
-                <p id="code-failure" hidden>Il n'y a plus de codes disponibles, désolé.</p>
+            <div id="code-success" hidden>
+                <p>Votre code : xxxx-xxxx</p>
+                <p>Copiez-le et utilisez-le ici :<br>
+                    <a href="https://adrienheisch.bandcamp.com/yum" target="_blank">https://adrienheisch.bandcamp.com/yum</a>
+                </p>
+            </div>
+            <p id="code-failure" hidden>Une erreur est survenue, désolé.</p>
             </section>
         </div>
         

@@ -291,6 +291,7 @@ a:hover, .a:hover {
     padding: 5px;
     background: #202020;
     text-decoration: none;
+    cursor: pointer;
 }
 
 footer {
